@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/vaijiNeel/Burger/issues"
   },
-  "homepage": "https://github.com/vaijiNeel/Burger#readme"
+  "homepage": "https://github.com/vaijiNeel/Burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.14.1",
+    "orm": "^4.0.1"
+  }
 }

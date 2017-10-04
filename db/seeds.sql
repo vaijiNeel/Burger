@@ -1,5 +1,7 @@
-insert into burgers (burger_name, devoured, orderDate)
+insert into burgers (burger_name)
 	values 
-		("Cheese burger", false, NOW()),
-		("Chicken burger", false, NOW()),	
-		("Veggie burger", false, NOW())
+		("Cheese burger"),
+		("Chicken burger"),	
+		("Veggie burger");
+
+select * from burgers;
