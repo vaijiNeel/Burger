@@ -11,3 +11,9 @@ img {
 	width: 20%;
 	height: 20%;
 }
+
+#brgrBought, #brgrDevoured {
+	border-color: gray;
+	background-color: light gray;
+	color: black;	
+}

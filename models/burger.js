@@ -1,10 +1,14 @@
 var orm = require("../config/orm.js");
 
+console.log("got into model js");
+
 var burger = {
 
 	//get all burgers
 	selectAll: function(bg) {
-		orm.selectAll("burgers", function(res) {
+		// orm.selectAll("burgers", function(res) {
+		orm.selectAll( function(res) {
+			console.log("burger.js:", res)
 			bg(res);
 		});
 	},

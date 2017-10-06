@@ -7,12 +7,13 @@
 <h1>Eat-Da-Burger</h1>
 <br>
 
-<div class="row burgers">
+<!-- <div class="row burgers">
 	<div class="burgersBought cols-md-6">
 		<ul>
-		  {{#each burgers}}
+		  {{#each burgerObj}}
 		    {{#unless devoured}}
-
+		    	<p id="brgrBought">burgerObj.burger_name</p>
+		    	<button id="devourIt" type="submit">Submit</button>
 		    {{/unless}}
 		  {{/each}}
 		</ul>
@@ -20,14 +21,14 @@
 	</div>
 	<div class="burgersDevoured cols-md-6">
 		<ul>
-		  {{#each burgers}}
+		  {{#each burgerObj}}
 		    {{#if devoured}}
-		    	
+		    	<p id="brgrDevoured">burgerObj.burger_name</p>
 		    {{/if}}
 		  {{/each}}
 		</ul>
 	</div>
-</div>
+</div> -->
 
 <br>
 

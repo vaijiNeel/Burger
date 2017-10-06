@@ -2,11 +2,14 @@ var burger = require("../models/burger.js");
 var express = require("express");
 var router = express.Router();
 
+console.log("got into controller");
+
 //get all
 router.get("/", function(req, res) {
+  // console.log("req from burger controller file:", req);
   burger.selectAll(function(data) {
-    console.log(data);
-    res.render("index", {burger: data} );
+    console.log("data from burger controller file:", data);
+    res.render("index", {burgerObj: data} );
   });
 });
 
