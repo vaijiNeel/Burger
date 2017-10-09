@@ -20,6 +20,7 @@ var burger = {
 
 	//update burger
 	updateOne: function(condition) {
+		console.log("inside burger js update id:", condition);
 		orm.updateOne("burgers", condition, function(res) {
 			// cb(res);
 		});

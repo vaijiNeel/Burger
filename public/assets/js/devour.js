@@ -26,7 +26,7 @@ $(function() {
 	$(".devourIt").on("click", function(event) {
 		// Make sure to preventDefault on a submit event.
     	event.preventDefault();
-    	console.log("inside devour js devour it put api", $(this).data);
+    	console.log("inside devour it put api data:", $(this).data);
     	var id = $(this).data("id");
     	console.log("id from devour js:", id);
 	    var devourItBgr = {
