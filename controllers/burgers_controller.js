@@ -23,7 +23,7 @@ router.post("/api/newBurger", function(req, res) {
 
 //update
 router.put("/api/devourIt/:id", function(req, res) {
-	console.log("put route:", req.params.id);
+	console.log("put route controller js:", req.params.id);
 	burger.updateOne(req.params.id, function(result) {
     if (result.changedRows == 0) {
     	// If no rows were changed, then the ID must not exist, so 404

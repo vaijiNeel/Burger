@@ -15,23 +15,25 @@ var orm = {
     });
   },
   
-  insertOne: function(tableName, cols, values) {
+  insertOne: function(tableName, cols, values, cb) {
     var queryString = "INSERT INTO ?? (??) VALUES (?)";
     connection.query(queryString, [tableName, cols, values], function(err, result) {
       if (err) {
         throw err;
       }
       console.log("inside orm.js insertOne:", result);
+      cb(result);
     });
   },
 
-  updateOne: function(tableName, whereValue) {
+  updateOne: function(tableName, whereValue, cb) {
     var queryString = "UPDATE ?? SET devoured = true WHERE id = ?";
     connection.query(queryString, [tableName, whereValue], function(err, result) {
       if (err) {
         throw err;
       }
       console.log("inside orm.js updateOne:", result);
+      cb(result);
     });
   } 
 };

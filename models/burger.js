@@ -12,17 +12,18 @@ var burger = {
 	},
 
 	//insert burger
-	insertOne: function(cols, vals) {
+	insertOne: function(cols, vals, cb) {
+		console.log("inside burger js insert:", cols, vals);
 		orm.insertOne("burgers", cols, vals, function(res) {
-			// cb(res);
+			cb(res);
 		});
 	},
 
 	//update burger
-	updateOne: function(condition) {
+	updateOne: function(condition, cb) {
 		console.log("inside burger js update id:", condition);
 		orm.updateOne("burgers", condition, function(res) {
-			// cb(res);
+			cb(res);
 		});
 	}
 }
