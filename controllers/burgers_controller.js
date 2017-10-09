@@ -8,24 +8,23 @@ console.log("got into controller");
 router.get("/", function(req, res) {
   // console.log("req from burger controller file:", req);
   burger.selectAll(function(data) {
-    console.log("data from burger controller file:", data);
+    // console.log("data from burger controller file:", data);
     res.render("index", {burgerObj: data} );
   });
 });
 
 //insert
-router.post("/newBurger", function(req, res) {
+router.post("/api/newBurger", function(req, res) {
 	console.log(req.body);
-	buger.insertOne(function(result) {
+	burger.insertOne(["burger_name"],[req.body.burger_name],function(result) {
 		res.json({ id: result.insertId });
 	});
 });
 
 //update
-router.put("/api/burger/:id", function(req, res) {
-	var condition = "id = " + req.params.id;
-	console.log("condition", condition);
-	buger.updateOne({burger_name: req.body.burger}, condition, function(result) {
+router.put("/api/devourIt/:id", function(req, res) {
+	console.log("put route:", req.params.id);
+	burger.updateOne(req.params.id, function(result) {
     if (result.changedRows == 0) {
     	// If no rows were changed, then the ID must not exist, so 404
     	return res.status(404).end();

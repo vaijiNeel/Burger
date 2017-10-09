@@ -7,35 +7,38 @@
 <h1>Eat-Da-Burger</h1>
 <br>
 
-<!-- <div class="row burgers">
+<div class="row burgers">
+
 	<div class="burgersBought cols-md-6">
 		<ul>
 		  {{#each burgerObj}}
 		    {{#unless devoured}}
-		    	<p id="brgrBought">burgerObj.burger_name</p>
-		    	<button id="devourIt" type="submit">Submit</button>
+		    	<span id="brgrBought">{{this.burger_name}}</span>
+		    	<button data-id="{{this.id}}" class="devourIt" type="submit">Devour it</button>
+		    	<br> <br>
 		    {{/unless}}
 		  {{/each}}
 		</ul>
-
 	</div>
+
 	<div class="burgersDevoured cols-md-6">
-		<ul>
+		<ol type="1">
 		  {{#each burgerObj}}
 		    {{#if devoured}}
-		    	<p id="brgrDevoured">burgerObj.burger_name</p>
+		    	<li><p id="brgrDevoured">{{this.burger_name}}</p></li>
 		    {{/if}}
 		  {{/each}}
-		</ul>
+		</ol>
 	</div>
-</div> -->
+
+</div>
 
 <br>
 
 <div>
   <form action="/" method="POST">
-  	<textarea type="text" name="burger"></textarea>
-  	<button type="submit">Submit</button>
+  	<textarea id="nwBgrNm" type="text" name="burger"></textarea> <br>
+  	<button class="newBurger" type="submit">Submit</button>
   </form>
 </div>
 

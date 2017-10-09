@@ -12,8 +12,16 @@ img {
 	height: 20%;
 }
 
-#brgrBought, #brgrDevoured {
+.burgersBought{
 	border-color: gray;
 	background-color: light gray;
 	color: black;	
+	float: left;
+	overflow: hidden;
+	padding-left: 20%
+}
+
+.burgersDevoured {
+	float: right;
+	padding-right: 30%
 }

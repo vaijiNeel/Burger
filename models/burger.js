@@ -1,29 +1,27 @@
 var orm = require("../config/orm.js");
-
 console.log("got into model js");
 
 var burger = {
 
 	//get all burgers
-	selectAll: function(bg) {
-		// orm.selectAll("burgers", function(res) {
-		orm.selectAll( function(res) {
-			console.log("burger.js:", res)
-			bg(res);
+	selectAll: function(cb) {
+		orm.selectAll("burgers", function(res) {
+			// console.log("burger.js:", res)
+			cb(res);
 		});
 	},
 
 	//insert burger
-	insertOne: function(cols, vals, bg) {
+	insertOne: function(cols, vals) {
 		orm.insertOne("burgers", cols, vals, function(res) {
-			bg(res);
+			// cb(res);
 		});
 	},
 
 	//update burger
-	updateOne: function(objColVals, condition, bg) {
-		orm.updateOne("burgers", objColVals, condition, function(res) {
-			bg(res);
+	updateOne: function(condition) {
+		orm.updateOne("burgers", condition, function(res) {
+			// cb(res);
 		});
 	}
 }
