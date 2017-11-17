@@ -1,9 +1,11 @@
 # Burger
 
 ## App Overview:
-  This is a Full Stack application written using Node JS, HTML, CSS, Javascript, JQuery, and express, express-handlebars, mySQL, body-parser, ORM packages, in a MVC model (Models, Views, Controllers). The app is deployed in Heroku too - https://burger-expressjs-handlebars.herokuapp.com/
-  
+  This is a Full Stack application written using Node JS, HTML, CSS, Javascript, JQuery, and express, express-handlebars, mySQL, body-parser, ORM packages, in a MVC model (Models, Views, Controllers). 
+    
   The user can add a burger to devour by entering the name in the textarea and clicking submit button. The data is inserted into mysql table, and also its listed on the webpage, on the left side with a button called Devour It. When the user clicks the devour it button the status of the burger is changed in database and the burger is moved to the right side on the webpage where devoured burgers are listed. 
+
+### [Live Demo](https://burger-expressjs-handlebars.herokuapp.com/)
 
 ## Folders/Files structure:
 * Server.js - holds all the required model loads (express, express-handlebars, body-parser, routes), and app listener.
